@@ -1,0 +1,49 @@
+<idea-plugin>
+  <id>com.syl.zombie.enumgenerator.v666</id>
+  <name>EnumMdGenerator</name>
+  <version>1.3</version>
+  <vendor email="719724508@qq.com" url="https://gitee.com/zombie1993/EnumMdGenerator">gitee</vendor>
+
+  <description><![CDATA[
+      use markdown generate enum class<br>
+      <ul>
+      <li>support markdown table to enum class</li>
+      <li>support lombok</li>
+      <li>support packaging (use the default )</li>
+      </ul>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      1.0<br>
+      <em>init version</em><br>
+      1.1<br>
+      <em>add a new null value,get more convenient</em><br>
+      1.2<br>
+      <em>fix bug</em>
+      1.3<br>
+      <em>fix grammar</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="EnumMdGenerator" class="com.syl.plugin.EnumPluginMain" text="EnumGenerator">
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift alt e"/>
+    </action>
+  </actions>
+
+</idea-plugin>
